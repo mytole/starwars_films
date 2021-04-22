@@ -11,8 +11,7 @@ const MoviesSlider = () => {
       slidesPerView={
         window.innerWidth < 400 ? 1.5 : window.innerWidth < 1080 ? 3 : 5
       }
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+
     >
       {slides}
     </Swiper>

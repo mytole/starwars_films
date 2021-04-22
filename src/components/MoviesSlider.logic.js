@@ -5,6 +5,7 @@ import MovieCard from "./MovieCard";
 export const useMoviesSlider = () => {
   const [movies, setMovies] = useState([]);
   const [slides, setSlides] = useState([]);
+
   const getMovies = async () => {
     try {
       const response = await fetch("https://swapi.dev/api/films/");
@@ -15,12 +16,13 @@ export const useMoviesSlider = () => {
       console.log(err);
     }
   };
+
   useEffect(() => {
     getMovies();
   }, []);
 
   useEffect(() => {
-    console.log(movies);
+
     if (movies.length > 0) {
       const slidesToDisplay = movies.map((movie) => (
         <SwiperSlide key={movie.episode_id}>
@@ -34,6 +36,7 @@ export const useMoviesSlider = () => {
       setSlides(slidesToDisplay);
     }
   }, [movies]);
+
   return {
     movies,
     slides,

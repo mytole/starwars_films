@@ -8,7 +8,7 @@ export const useMovieCard = (title, id) => {
   useEffect(() => {
     if (Cookies.get("likes")) {
       const likesObject = Cookies.getJSON("likes");
-      console.log(likesObject[id]);
+
       if (likesObject[id]) {
         setLiked(true);
       }

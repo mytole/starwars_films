@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useMovieCard } from "./MovieCard.logic";
 
-//should take title and description and use logic to fetch image
 const MovieCard = ({ title, description, id }) => {
   const { imgUrl, liked, handleOnLike } = useMovieCard(title, id);
 
